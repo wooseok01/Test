@@ -63,7 +63,7 @@ html
 
 #pr-underline{
 	width : 200px;
-	height : 2px;
+	height : 4px;
 	border-color: #ef4035;
 	border-image : none;
 	border-style : solid none solid none;
@@ -157,18 +157,167 @@ html
 	text-align: left;
 	margin : 0 auto;
 	font-size : 16px;
-	margin-bottom: 10px;
 }
 
 /* page2 */
 #use-recomand{
 	width : 100%;
 	height : 1024px;
-	margin-top : 20px;
+	margin-top : 16px;
 }
 
 #use-recomand > hr{
+	margin-top : 16px;
 	width : 338px;
+	margin-bottom : 20px;
 }
+
+#reco-ment{
+	text-align: center;
+	font-size: 24px;
+	line : 45px;
+	color: #4A4A4A 100%;
+	font-family: 'AppleSDGothicNeo-Light';
+	
+	margin-top : 20px;
+	margin-bottom : 40px;
+}
+
+#pr-device{
+	width : 100%;
+	height : 510px;
+	background-color: red;
+}
+
+#how-make{
+	width : 100%;
+	height : 450px;
+	background-color : blue;
+}
+
+/* page3 - price */
+#pr-price{
+	width : 100%;
+	height : 1024px;
+}
+
+
+#pr-share{
+	width : 100%;
+	height : 314px;
+	background-color: gray;
+}
+
+#pr-share-header{
+	position : relative;
+}
+
+#pr-share-header > div:first-child{
+	width : 100%;
+	height : 52px;
+	line-height: 52px;
+	vertical-align: middle;
+}
+
+#pr-share-header > div{
+	float : left;
+}
+
+#share-pdf-btn{
+	width : 52px;
+	height : 52px;
+	border-radius: 25px;
+}
+
+#pr-share-download > div > img{
+	float : left;
+}
+
+#pr-share-download{
+	position : absolute;
+	width : 200px;
+	height : 52px;
+	right : 0;
+	margin-right: 4%;
+}
+
+#pr-share-download > div{
+	width : 100%;
+	height : 100%;
+	vertical-align: middle;
+	line-height: 52px;
+}
+
+#pr-share-download > div > a{
+	text-decoration: none;
+	color: blue;
+}
+
+#pr-share-download > div > a:hover{
+	text-decoration: underline;
+}
+
+#pr-share > div:first-child{
+	font-size : 24px;
+	text-align: center;
+	padding-top : 40px;
+}
+
+#pr-share-list{
+	width : 70%;
+	height : 100%;
+	margin : 0 auto;
+	margin-top : 80px;
+}
+
+#pr-share-list > div{
+	width : 33%;
+	height : 100%;
+	float : left;
+	margin : 0 auto;
+}
+
+.share-icon-overlay,
+.share-icon{
+	width : 54px;
+	height : 54px;
+	margin : 0 auto;
+	margin-bottom : 20px;
+}
+
+.share-icon-descript{
+	width : 80%;
+	margin : 0 auto;
+	word-break : break-all;
+	text-align: center;
+}
+
+#pr-select-price{
+	width : 100%;
+	height : 710px;
+	background-color: green;
+}
+
+/* page4 - search */
+#pr-search{
+	width : 100%;
+	height : 1024px;
+	background-color: black;
+	color : white;
+	padding-top : 30px;
+}
+
+#pr-search-ment{
+	width : 80%;
+	margin : 0 auto;
+}
+
+#pr-search-ment > div:first-child{
+	text-align: center;
+	margin-bottom : 40px;
+	font-size: 24px;
+}
+
+
 
 
