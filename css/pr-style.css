@@ -1,0 +1,174 @@
+@CHARSET "UTF-8";
+
+/* page 1 */
+html
+,body{
+	width : 1440px;
+	margin : 0 auto;
+}
+
+#pr-intro{
+	width : inherit;
+	height : 710px;
+	
+}
+
+#pr-intro > img{
+	width : 250px;
+	height : 250px;
+}
+
+#pr-overlay{
+	position : absolute;
+	width : auto;
+	height : auto;
+	min-width : 1440px;
+	min-height : 710px;
+	margin : 0 auto;
+	background-color: rgba(0,0,0,.5);
+	z-index : 100;
+}
+
+#pr-overlay::after{
+	top : 0;
+	right : 0;
+	bottom : 0;
+	left : 0;
+	content : "";
+}
+
+#intro-contents{
+	width : inherit;
+	height : 710px;
+	position : absolute;
+	
+	top : 10%;
+	text-align: center;
+	margin : 0 auto;
+	
+	z-index : 200;
+}
+
+
+#intro-logo{
+	width : 250px;
+	height : 250px;
+	margin : 0 auto;
+}
+
+#app-intro{
+	font-size: 25px;
+	color : white;
+}
+
+#pr-underline{
+	width : 200px;
+	height : 2px;
+	border-color: #ef4035;
+	border-image : none;
+	border-style : solid none solid none;
+}
+
+#co-intro{
+	font-size: 15px;
+	color: white;
+}
+
+
+#pr-video{
+	position : absolute;
+	width : 1440px;
+	height : 710px;
+	overflow : hidden;
+}
+
+#pr-video > video
+,#pr-video > video > source{
+	width : 100%;
+	size : portrait;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#pr-descript{
+	width : inherit;
+	height : 312px;
+
+	background-color: white;
+
+	color: #4A4A4A;
+	
+	opacity : 1;
+	z-index : 300;
+}
+
+#pr-descript > p:first-child{
+	width : 60%;
+	margin : 0 auto;
+	
+	font-size: 24px;
+	line: 45px;
+	font-family: 'AppleSDGothicNeo-Light';
+	text-align : center;
+	margin-top : 40px;
+	margin-bottom: 80px;
+}
+
+#pr-descript-section{
+	width : 60%;
+	height : 100%;
+	margin: 0 auto;
+}
+
+#pr-descript-section > div{
+	width : 50%;
+	float : left;
+	margin: 0 auto;
+}
+
+#pr-platform > div:first-child,
+#pr-convenient > div:first-child{
+	width : 100%;
+	line-height: 25px;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+#pr-platform > div:first-child > img,
+#pr-convenient > div:first-child > img{
+	width : 25px;
+	height : 25px;
+	display: inline;
+}
+
+.pr-icon-title{
+	font-size: 25px;
+	vertical-align: top;
+}
+
+.pr-icon{
+	margin : 0 auto;
+	margin-right : 10px;
+	margin-bottom : 40px;
+}
+
+.pr-icon-descript{
+	width : 78%;
+	text-align: left;
+	margin : 0 auto;
+	font-size : 16px;
+	margin-bottom: 10px;
+}
+
+/* page2 */
+#use-recomand{
+	width : 100%;
+	height : 1024px;
+	margin-top : 20px;
+}
+
+#use-recomand > hr{
+	width : 338px;
+}
+
+
