@@ -205,7 +205,7 @@ html
 #pr-share{
 	width : 100%;
 	height : 314px;
-	background-color: gray;
+	background-color: rgb(231,229,230);
 }
 
 #pr-share-header{
@@ -250,7 +250,7 @@ html
 
 #pr-share-download > div > a{
 	text-decoration: none;
-	color: blue;
+	color: rgb(98,145,190);
 }
 
 #pr-share-download > div > a:hover{
@@ -267,7 +267,7 @@ html
 	width : 70%;
 	height : 100%;
 	margin : 0 auto;
-	margin-top : 80px;
+	margin-top : 100px;
 }
 
 #pr-share-list > div{
@@ -288,6 +288,7 @@ html
 .share-icon-descript{
 	width : 80%;
 	margin : 0 auto;
+	margin-top : 40px;
 	word-break : break-all;
 	text-align: center;
 }
@@ -301,10 +302,11 @@ html
 /* page4 - search */
 #pr-search{
 	width : 100%;
-	height : 1024px;
-	background-color: black;
+	height : 1065px;
+	background-color: #3e4149;
 	color : white;
 	padding-top : 30px;
+	overflow: hidden;
 }
 
 #pr-search-ment{
@@ -318,6 +320,105 @@ html
 	font-size: 24px;
 }
 
+#pr-search-ment > div:last-child{
+	margin-bottom : 50px;
+}
 
+#pr-vi-player{
+	width : 1440px;
+	height : 100%;
+	border: none;
+	overflow: hidden;
+}
+
+/* page5 - subscribe */
+#pr-subscribe{
+	width : 1440px;
+	height : 1024px;
+	background-color: #3e4149;
+	padding-top : 96px;
+}
+
+#subscribe-hr{
+	margin : 0 auto; 
+	width : 343px;
+	border : 1px solid rgb(124,126,131);
+}
+
+#subscribe-ment{
+	color: white;
+	font-size: 24px;
+	margin-top : 31px;
+	margin-bottom : 73px;
+	text-align: center;
+}
+
+#subscribe-form{
+	width : 476px;
+	height : 46px;
+	margin : 0 auto;
+}
+
+#mail-form{
+	width : 356px;
+	height : 100%;
+	float : left;
+	border : none;
+	padding : 0px;
+	padding-left : 20px;
+	background-color: rgb(218,218,218);
+	color : #3e4149;
+}
+
+#mail-form::-webkit-input-placeholder{
+	color : #3e4149;
+	opacity : 1;
+}
+#mail-form::-moz-placeholder{
+	color : #3e4149;
+	opacity : 1;
+}
+#mail-form::-ms-input-placeholder{
+	color : #3e4149;
+	opacity : 1;
+}
+
+#submit-btn{
+	width : 100px;
+	height : 100%;
+	border: none;
+	padding : 0px;
+	background-color: rgb(239,133,118);
+	color: white;
+}
+
+#contact-container{
+	text-align: center;	
+	margin-top : 100px;
+	margin-bottom : 20px;
+}
+
+.contact{
+	color: gray;
+	font-size: 16px;
+	line : 19px;
+	text-align: center;
+}
+
+a.contact{
+	text-decoration: underline;
+}
+
+a.contact:hover{
+	color: white;
+}
+
+#copyright{
+	color : white;
+	opacity : 1;
+	font-size : 16px;
+	line : 19px;
+	text-align: center;
+}
 
 
