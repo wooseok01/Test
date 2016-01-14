@@ -12,6 +12,7 @@ html
 	width : inherit;
 	height : 710px;
 	position : relative;
+	overflow: hidden;
 }
 
 #pr-intro > img{
@@ -28,6 +29,24 @@ html
 	margin : 0 auto;
 	background-color: rgba(0,0,0,.5);
 	z-index : 100;
+}
+
+#pr-video{
+	position : absolute;
+	width : 1440px;
+	height : 710px;
+	max-width : 1440px;
+	max-height : 710px;
+	height : auto;
+	overflow : hidden;
+}
+
+#pr-video > video
+,#pr-video > video > source{
+	width : 100%;
+	size : portrait;
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 #pr-overlay::after{
@@ -321,20 +340,6 @@ html
 	overflow: hidden;
 }
 
-#pr-video{
-	position : absolute;
-	width : 100%;
-	height : auto;
-	overflow : hidden;
-}
-
-#pr-video > video
-,#pr-video > video > source{
-	width : 100%;
-	size : portrait;
-	overflow: hidden;
-	margin: 0 auto;
-}
 
 /* page5 - subscribe */
 #pr-subscribe{
