@@ -1,0 +1,96 @@
+html{
+    width :100%;
+    height : 100%;
+}
+
+body{
+    width : 80%;
+    height : 100%;
+    margin : 0 auto;
+}
+
+#header{
+    width : 100%;
+    height : 5%;
+    text-align: center;
+    padding-top : 30px;
+}
+
+#header > a{
+    text-decoration: none;
+    float : right;
+    margin-right: 30px;
+}
+
+#header > a:hover{
+	text-decoration: underline;
+}
+
+h3{
+    display : inline;
+}
+
+div.wrap{
+    position : relative;
+    padding-top: 30px;
+    width : 100%;
+    height : 90%;
+    overflow: hidden;
+}
+
+div.wrap > div{
+	width : 100%;
+    height : 100%;
+    overflow: auto;
+}
+
+table{
+	width : 100%;
+	height : 100%;
+}
+
+thead tr{
+    position : absolute;
+    top : 0;
+    display: block;
+    background-color: #DEDEDE;
+    width :100%;
+    height : 30px;
+}
+
+thead th{
+	width : 200px;
+	height : 30px;
+}
+
+tbody{
+    display : block;
+    height : 300px;
+}
+
+tbody tr{
+    height : auto;
+    border : 1px solid rgb(245,245,245);
+    height : 30px;
+}
+
+tbody tr:hover{
+	background-color : rgb(245,245,245);
+}
+
+tbody td{
+	width : 200px;
+}
+
+.center{
+	text-align: center;
+}
+
+.left{
+	text-align: left;
+	padding-left: 20px;
+}
+
+.cursor{
+	cursor: pointer;
+}

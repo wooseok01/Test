@@ -1,0 +1,19 @@
+html
+  head
+    title loginPage
+    link(rel="stylesheet", href="style/normalize.css")
+    link(rel="stylesheet", href="style/index.css")
+  body
+    
+
+body
+  div#index-container
+    h1#title Welcome!!
+    form(action="/login", method="POST")#join-form
+      input(type="text", name="id")
+      input(type="password", name="pass")
+      input(type="submit", value="Login").btn
+      a(href="/join")
+        input(type="button", value="Join")#join-btn.btn
+      
+      

@@ -1,0 +1,26 @@
+html
+  head
+    title loginPage
+    link(rel="stylesheet", href="style/normalize.css")
+    link(rel="stylesheet", href="style/main.css")
+
+body
+  div#header
+    h3 welcome #{user.name}님! 
+    a(href="/myPage") #{user.id}
+    a(href="/logout") 로그아웃
+  div.wrap
+    div
+      table
+        thead
+          tr
+            th #
+            th 파일 이름
+            th 생성 날짜
+            th 수정 날짜
+            th 남은 날짜
+        tbody#tbody
+          
+  script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+  script(type="text/javascript", src="js/mainScript.js")
+  script(type="text/javascript", src="js/userDirInterface.js")

@@ -1,0 +1,19 @@
+html
+  head
+    title loginPage
+    link(rel="stylesheet", href="style/normalize.css")
+    link(rel="stylesheet", href="style/index.css")
+  body
+    
+
+body
+  div#index-container
+    h1#title Thanks for sign in!
+    form(action="/join", method="POST")#join-form
+      input(type="text", name="id", placeholder="ID(e-mail)")
+      input(type="password", name="pass", placeholder="password").password
+      input(type="password", placeholder="password again").password
+      input(type="text", name="name", placeholder="name")
+      input(type="submit", value="Sign in").btn
+      
+      
