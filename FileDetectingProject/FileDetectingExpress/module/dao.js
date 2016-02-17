@@ -13,7 +13,8 @@ function joinUser(post, cb){
 	userList.save({
         id : post.id,
         pass : post.pass,
-        name : post.name
+        name : post.name,
+        groupList : null
     });
 	
 	userFileList.save({
@@ -104,10 +105,21 @@ function getDirData(user, path, cb){
     });
 }
 
+function getGroupList(user){
+    userList.findOne({id : user.id}, function(err, data){
+        var groupList = data.groupList;
+        if(groupList == null) return null;
+        else{
+            return groupList;
+        }
+    });
+}
+
 
 module.exports = {
     joinUser : joinUser,
     loginCheck : loginCheck,
     getRootFile : getRootFile,
-    getDirData : getDirData
+    getDirData : getDirData,
+    getGroupList : getGroupList
 };

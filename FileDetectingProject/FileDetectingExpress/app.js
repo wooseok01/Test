@@ -13,6 +13,7 @@ var port = 3000;
 
 var root = '/home/songwooseok/Documents';
 var dir = '/root';
+var group = '/group';
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -31,6 +32,7 @@ app.listen(port, function(){
     console.log('Server is running on ' + port);
     var watcher = require('./module/fileWatcher');
     watcher(root, dir);
+    watcher(root, group);
 });
 
 module.exports = app;

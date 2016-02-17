@@ -66,9 +66,11 @@ router.get('/logout', function(req, res, next){
 router.get('/main', function(req, res, next){
     sessionCheck(req.session, res);
     var user = req.session.user;
+    var groupList = dao.getGroupList(req.session);
     
     res.render('main', {
-        user : user
+        user : user,
+        groupList : groupList
     });
 });
 

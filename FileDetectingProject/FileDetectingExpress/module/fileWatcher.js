@@ -11,7 +11,6 @@ function autoFileDetect(root, dir){
     var serverUrl = 'localhost:3000';
 
     watcher.on('create', function(file, state){
-//    	console.log(file);
         if(!file.match('.DS_Store')){
             var substring = file.substring((root + dir +'/').length, file.length);
             var parentDirPlag = substring.indexOf('/');
