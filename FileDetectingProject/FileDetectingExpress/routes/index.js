@@ -66,7 +66,7 @@ router.get('/logout', function(req, res, next){
 router.get('/main', function(req, res, next){
     sessionCheck(req.session, res);
     var user = req.session.user;
-    var groupList = dao.getGroupList(req.session);
+    var groupList = dao.getGroupList(user);
     
     res.render('main', {
         user : user,
@@ -100,6 +100,14 @@ router.post('/getDirData', function(req, res, next){
             //res.setHeader('Content-type', 'application/json');
             res.send(fileList);
         }
+    });
+});
+
+router.get('/group', function(req, res, next){
+    sessionCheck(req.session, res);
+    var groupList = dao.getGroupList(req.session.user);
+    res.render('group',{
+        groupList : groupList
     });
 });
 
