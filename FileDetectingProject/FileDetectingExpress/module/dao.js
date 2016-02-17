@@ -5,7 +5,8 @@ var mongo = require('mongojs'),
     fs = require('fs'),
     async = require('async');
 
-var root = '/home/songwooseok/Document/root';
+var root = '/home/songwooseok/Documents',
+    dir = '/root';
 
 function joinUser(post, cb){
     
@@ -13,9 +14,13 @@ function joinUser(post, cb){
         id : post.id,
         pass : post.pass,
         name : post.name
-    }, cb);
+    });
+	
+	userFileList.save({
+	    id : post.id,
+	    path : root+dir+'/'+post.name
+	}, cb);
     
-    fs.mkdir(root+'/'+post.name);
 }
 
 function loginCheck(post, cb){

@@ -11,8 +11,8 @@ var express = require('express'),
 var app = express();
 var port = 3000;
 
-var root = '/Users/songwooseok/Documents';
-var dir = '/testDir';
+var root = '/home/songwooseok/Documents';
+var dir = '/root';
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

@@ -5,8 +5,8 @@ var express = require('express'),
     fs = require('fs'),
     dao = require('../module/dao');
 
-var root = '/Users/songwooseok/Documents';
-var dir = '/testDir';
+var root = '/home/songwooseok/Documents';
+var dir = '/root';
     
 
 router.get('/', function(req, res, next){
@@ -32,7 +32,10 @@ router.post('/join', function(req, res, next){
     
     dao.joinUser(post, function(err){
     	if(err) console.log(err.message);
-    	else console.log('user join success!');
+    	else{
+    	    console.log('user join success!');
+    	    fs.mkdir(root+dir+'/'+post.name);
+    	}
     });
 
     res.redirect('/');
