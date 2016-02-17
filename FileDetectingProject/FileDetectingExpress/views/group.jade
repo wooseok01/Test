@@ -9,7 +9,10 @@ body
     input(type="button", value="그룹 생성")#addGroup
   
   div#groupList
-    
+    - if(groupList)
+      - for (var key in #{groupList})
+        div.group
+          img(alt="dirImg", src="../public/images.jpeg")
           
   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
   script(type="text/javascript", src="js/mainScript.js")
