@@ -1,5 +1,5 @@
 var mongo = require('mongojs'),
-    db = mongo('fileDetecting',['userFileList','userList']),
+    db = mongo('fileDetecting',['userFileList','userList','groupList']),
     userList = db.userList,
     userFileList = db.userFileList,
     groupList = db.groupList,
