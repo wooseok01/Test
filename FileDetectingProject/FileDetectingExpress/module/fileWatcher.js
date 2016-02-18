@@ -18,7 +18,7 @@ function autoFileDetect(root, dir){
             console.log('name ---> '+name);
             console.log('name-length ----> '+ name.length);
             
-            var parentDirPlag = substring.substring(substring.indexOf('/'), substring.length);
+            var parentDirPlag = substring.substring(substring.indexOf('/')+1, substring.length);
             console.log('parentDirPlag ---> '+parentDirPlag);
             console.log('parentDirPlag ---> '+parentDirPlag.indexOf('/'));
             if(parentDirPlag.indexOf('/') === -1 && name.length > 0){
