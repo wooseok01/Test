@@ -66,7 +66,10 @@ $(document).ready(function(){
         $('#diBox').dialog('open');
     });
     
-    if($('#addGroupErr')) alert('그룹 생성 에러!');
+//    if($('#addGroupErr').text()) alert('그룹 생성 에러!');
+    console.log($('#addGroupErr').html());
+    
+    $('#diBox').hide();
     
 });
 
