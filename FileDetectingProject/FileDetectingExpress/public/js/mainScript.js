@@ -40,21 +40,23 @@ $(document).ready(function(){
     
     $('#makeGroup').click(function(){
         $('#diBox').dialog({
-            autoOpen : false,
-            width : 500,
-            height : 800,
-            modal : true,
-            title : '그룹 생성',
-            resizable : false,
-            buttons : {
-                "생성하기" : function(){
-                    $(this).dialog('close');
-                },
-                "닫기" : function(){
-                    $(this).dialog('close');
-                }
-            } 
+            open : function(){
+                $(this).find('[type=submit]').hide();
+            },
             
+            buttons : [
+                {
+                    text : 'Create',
+                    click : $.noop,
+                    type : 'submit'
+                },
+                {
+                    text : 'Cancel',
+                    click : function(){
+                        $(this).dialog('close');
+                    }
+                }
+            ]
         });
         $('#diBox').dialog('open');
     });

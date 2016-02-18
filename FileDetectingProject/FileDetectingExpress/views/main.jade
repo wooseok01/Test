@@ -22,7 +22,10 @@ body
             th 남은 날짜
         tbody#tbody
 
-  div#diBox
+  form(action="/addGroup", method="post")#diBox
+    input(type="text", placeholder="그룹명을 입력하세요.", name="groupName")
+    br
+    input(type="submit", value="Create")
           
   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
   script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js")
