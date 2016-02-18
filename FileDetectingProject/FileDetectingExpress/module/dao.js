@@ -27,6 +27,7 @@ function joinUser(post, cb){
 
 function loginCheck(post, cb){
     userList.findOne({id : post.id, pass : post.pass}, function(err, data){
+    	console.log(data._id);
         if(data){
             cb(null, {id : data.id, name : data.name});
         }else{
