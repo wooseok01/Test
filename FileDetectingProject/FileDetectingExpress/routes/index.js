@@ -34,7 +34,7 @@ router.post('/join', function(req, res, next){
     	if(err) console.log(err.message);
     	else{
     	    console.log('user join success!');
-    	    fs.mkdir(root+dir+'/'+post.name);
+    	    fs.mkdir(root+dir+'/'+data._id);
     	}
     });
 

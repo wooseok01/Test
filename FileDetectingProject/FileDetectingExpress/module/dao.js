@@ -21,15 +21,19 @@ function joinUser(post, cb){
 	userFileList.save({
 	    id : post.id,
 	    path : root+dir+'/'+post.name
-	}, cb);
+	});
+	
+	userList.findOne({id : post.id}, function(err, data){
+	    cb(null,data);
+	});
     
 }
 
 function loginCheck(post, cb){
     userList.findOne({id : post.id, pass : post.pass}, function(err, data){
-    	console.log(data._id);
+    	
         if(data){
-            cb(null, {id : data.id, name : data.name});
+            cb(null, {id : data.id, name : data.name, _id : data._id});
         }else{
             cb(new Error('login fail!', null));
         }
