@@ -114,8 +114,11 @@ router.post('/getDirData', function(req, res, next){
 });
 
 router.post('/addGroup', function(req, res, next){
+    if(!req.session.user) return false;
+
     var post = req.body;
-    console.log('groupName -> ' + post.groupName);
+    dao.addGroup(post.groupName, req.session.user);
+    return true;
 });
 
 

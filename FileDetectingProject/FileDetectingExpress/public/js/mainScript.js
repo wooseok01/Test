@@ -58,8 +58,8 @@ $(document).ready(function(){
                                 groupName : groupName
                             },
                             type : 'post',
-                            success : function(){
-                                alert('그룹 생성 완료!');
+                            success : function(bool){
+                            	if(bool == true) alert('그룹 생성 완료!');
                                 $(this).dialog('close');
                             },
                             error : function(){

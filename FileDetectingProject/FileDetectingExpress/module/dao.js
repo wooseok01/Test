@@ -115,11 +115,25 @@ function getGroupList(user){
     });
 }
 
+function addGroup(groupName, user){
+	var groupList;
+    userList.findOne({id : user.id}, function(err, data){
+        groupList = data.groupList;
+        if(groupList) groupList.push(groupName);
+        else{
+            groupList = [];
+            groupList.push(groupName);
+        }
+        userList.updateOne({id : user.id}, {$set : {groupList : groupList}});
+    });
+}
+
 
 module.exports = {
     joinUser : joinUser,
     loginCheck : loginCheck,
     getRootFile : getRootFile,
     getDirData : getDirData,
-    getGroupList : getGroupList
+    getGroupList : getGroupList,
+    addGroup : addGroup
 };
