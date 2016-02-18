@@ -13,7 +13,7 @@ function autoFileDetect(root, dir){
     watcher.on('create', function(file, state){
         if(!file.match('.DS_Store')){
             var substring = file.substring((root + dir +'/').length, file.length);
-            var name = /^([a-zA-Z0-9])\/[a-zA-Z0-9]/.exec(substring);
+            var name = substring.substring(0, substring.indexOf('/'));
             console.log('substring -->>>'+substring);
             console.log('fileName ->>> '+name);
             var parentDirPlag = substring.indexOf('/');
