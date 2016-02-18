@@ -46,21 +46,15 @@ $(document).ready(function(){
             modal : true,
             title : '그룹 생성',
             resizable : false,
-            closeOnEscape : true,
-            closeText : '닫기',
+            buttons : {
+                "생성하기" : function(){
+                    $(this).dialog('close');
+                },
+                "닫기" : function(){
+                    $(this).dialog('close');
+                }
+            } 
             
-            create : function(){
-                
-            },
-            open : function(){
-                
-            },
-            close : function(){
-                
-            },
-            cancle : function(){
-                
-            }
         });
         $('#diBox').dialog('open');
     });
