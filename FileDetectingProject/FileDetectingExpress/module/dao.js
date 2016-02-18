@@ -165,6 +165,7 @@ function insertGroupListCollection(groupName, user, cb){
 
 function getUserId(objId, cb){
     userList.findOne({_id : objId}, function(err, data){
+    	console.log('mail ---->>>> '+data.id);
         if(err) cb(err,null);
         else cb(null,data.id);
     });
