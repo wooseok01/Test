@@ -94,7 +94,3 @@ tbody td{
 .cursor{
 	cursor: pointer;
 }
-
-#addGroupErr{
-    display: none;
-}
