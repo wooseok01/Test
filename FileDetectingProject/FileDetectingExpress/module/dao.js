@@ -120,17 +120,17 @@ function getGroupList(user,cb){
 }
 
 function addGroup(groupName, user, cb){
-	var groupList;
+	var _groupList;
     userList.findOne({id : user.id}, function(err, data){
-        groupList = data.groupList;
-        if(groupList){
+        _groupList = data.groupList;
+        if(_groupList){
         	
-            groupList.push({groupName : groupName});
+            _groupList.push({groupName : groupName});
         }else{
-            groupList = [];
-            groupList.push({groupName : groupName});
+            _groupList = [];
+            _groupList.push({groupName : groupName});
         }
-        userList.update({id : user.id}, {$set : {groupList : groupList}}, function(err){
+        userList.update({id : user.id}, {$set : {groupList : _groupList}}, function(err){
             if(err) cb(false);
         });
         groupList.findOne({groupName : groupName}, function(err, data){
