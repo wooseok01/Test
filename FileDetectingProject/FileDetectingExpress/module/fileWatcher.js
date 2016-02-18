@@ -18,7 +18,7 @@ function autoFileDetect(root, dir){
             console.log('name ---> '+name);
             
             var parentDirPlag = substring.indexOf('/');
-            if(parentDirPlag === -1 || name != null){
+            if(parentDirPlag === -1 || name != ''){
                 console.log(file + ' is added!');
                 dao.getUserId(name, function(err,userMail){
                 	if(err){console.log(err.message);return;}
