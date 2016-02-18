@@ -11,11 +11,6 @@ body
     input(type="button", value="개인 서버로")#goToPrivate
   
   div#groupList
-    - if(groupList)
-      - for (var key in groupList)
-        div.group
-          img(alt="dirImg", src="../public/images.jpeg")
-          a(href="/selectGroup?#{groupList[key]}") #{groupList[key]}
 
   form(action="/addGroup", method="post")#diBox
     input(type="text", placeholder="그룹명을 입력하세요.", id="groupName")

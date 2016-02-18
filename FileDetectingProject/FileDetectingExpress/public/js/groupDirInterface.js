@@ -10,7 +10,7 @@ function groupDirInterface(){
                     var img = $('<img></img>');
                     var aTag = $('<a></a>').html(element.groupName);
                     
-                    img.attr('src','../public/img/images.jpeg');
+                    img.attr('src','../img/images.jpeg');
                     aTag.attr('href','/selectGroup?groupName='+element.groupName);
                     
                     div.append(img);

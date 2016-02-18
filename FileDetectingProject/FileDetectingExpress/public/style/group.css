@@ -29,6 +29,10 @@ body{
     float : left;
 }
 
+#groupList > a{
+    text-align: center;
+}
+
 .group{
     width : 25%;
     height : 25%;
