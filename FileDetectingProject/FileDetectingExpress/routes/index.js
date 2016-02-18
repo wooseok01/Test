@@ -95,6 +95,7 @@ router.get('/getGroupList', function(req, res, next){
     if(!req.session.user) return new Error('you must login!');
     var user = req.session.user;
     var groupList = dao.getGroupList(user);
+    console.log(groupList);
     res.setHeader('Content-type', 'application/json');
     res.send(groupList);
 	

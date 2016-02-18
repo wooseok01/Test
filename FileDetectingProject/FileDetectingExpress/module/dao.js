@@ -2,6 +2,7 @@ var mongo = require('mongojs'),
     db = mongo('fileDetecting',['userFileList','userList']),
     userList = db.userList,
     userFileList = db.userFileList,
+    groupList = db.groupList,
     fs = require('fs'),
     async = require('async');
 
@@ -120,16 +121,19 @@ function addGroup(groupName, user, cb){
 	var groupList;
     userList.findOne({id : user.id}, function(err, data){
         groupList = data.groupList;
-        if(groupList) groupList.push(groupName);
-        else{
+        if(groupList){
+        	
+            groupList.push({groupName : groupName});
+        }else{
             groupList = [];
-            groupList.push(groupName);
+            groupList.push({groupName : groupName});
         }
         userList.update({id : user.id}, {$set : {groupList : groupList}}, function(err){
             if(err) cb(false);
-            else cb(true);
         });
     });
+    
+    
 }
 
 
