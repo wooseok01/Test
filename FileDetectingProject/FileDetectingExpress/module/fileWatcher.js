@@ -13,6 +13,8 @@ function autoFileDetect(root, dir){
     watcher.on('create', function(file, state){
         if(!file.match('.DS_Store')){
             var substring = file.substring((root + dir +'/').length, file.length);
+            var name = /([a-zA-Z0-9])/[a-zA-Z0-9]/.exec(substring);
+            console.log('fileName ->>> '+name);
             var parentDirPlag = substring.indexOf('/');
             if(parentDirPlag === -1){
                 console.log(file + ' is added!');

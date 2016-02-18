@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var userDirInterface = getDirPath(null);
+    var userDirInterface = getDirPath();
     
     userDirInterface.getRootDir(function(data){
         var tbody = $('#tbody');

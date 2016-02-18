@@ -31,7 +31,7 @@ $(document).ready(function(){
         $('#diBox').dialog('open');
     });
     
-    if($('#addGroupErr').html() != undefined) alert('그룹 생성 에러!');
+    if($('#addGroupErr').html() == 'true') alert('그룹 생성 에러!');
     
     $('#diBox').hide();
     
