@@ -14,6 +14,8 @@ function autoFileDetect(root, dir){
         if(!file.match('.DS_Store')){
             var substring = file.substring((root + dir +'/').length, file.length);
             var name = substring.substring(0, substring.indexOf('/'));
+            console.log('substring ---> '+substring);
+            console.log('name ---> '+name);
             
             var parentDirPlag = substring.indexOf('/');
             if(parentDirPlag === -1 || name === null){
