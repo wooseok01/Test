@@ -66,11 +66,9 @@ router.get('/logout', function(req, res, next){
 router.get('/main', function(req, res, next){
     sessionCheck(req.session, res);
     var user = req.session.user;
-    var groupList = dao.getGroupList(user);
     
     res.render('main', {
-        user : user,
-        groupList : groupList
+        user : user
     });
 });
 
@@ -94,7 +92,10 @@ router.get('/addGroup', function(req, res, next){
 
 
 router.get('/getGroupList', function(req, res, next){
-    
+    if(!req.session.user) return new Error('you must login!');
+    var groupList = dao.getGroupList(user);
+    res.setHeader('Content-type', 'application/json');
+    res.send(groupList);
 	
 });
 
