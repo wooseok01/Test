@@ -18,11 +18,6 @@ function joinUser(post, cb){
         groupList : null
     });
 	
-	userFileList.save({
-	    id : post.id,
-	    path : root+dir+'/'+post.name
-	});
-	
 	userList.findOne({id : post.id}, function(err, data){
 		userFileList.save({
 		    id : post.id,
