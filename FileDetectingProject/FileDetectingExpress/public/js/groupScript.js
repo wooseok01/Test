@@ -30,4 +30,8 @@ $(document).ready(function(){
     if($('#addGroupErr').html() != undefined) alert('그룹 생성 에러!');
     
     $('#diBox').hide();
+    
+    $('#goToPrivate').click(function(){
+        location.href='/main';
+    });
 });
