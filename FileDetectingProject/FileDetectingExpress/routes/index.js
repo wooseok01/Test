@@ -103,9 +103,9 @@ router.get('/getRootData', function(req, res, next){
     sessionCheck(req.session, res);
 
     dao.getRootFile(req.session.user, function(err, fileList){
-        if(err) console.log(err.message);
+    	res.setHeader('Content-type', 'application/json');
+        if(err) res.send(null);
         else{
-            res.setHeader('Content-type', 'application/json');
             res.send(fileList);
         }
     });

@@ -4,8 +4,7 @@ function getDirPath(path){
             url : '/getRootData',
             dataType : 'json',
             success : function(data){
-                cb(data);
-                
+                if(data!=null)cb(data);
 	        },
 	        error : function(err){
 	            cb(err, null);
