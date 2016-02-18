@@ -164,7 +164,7 @@ function insertGroupListCollection(groupName, user, cb){
 }
 
 function getUserId(objId, cb){
-    userList.findOne({_id : ObjectId(objId)}, function(err, data){
+    userList.findOne({_id : new mongo.ObjectID(objId)}, function(err, data){
     	console.log('mail ---->>>> '+data.id);
         if(err) cb(err,null);
         else cb(null,data.id);
