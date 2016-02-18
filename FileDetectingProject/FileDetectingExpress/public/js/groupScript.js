@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var getGroupInterface = groupDirInterface();
 	getGroupInterface.getGroupList();
 	
-    $('#makeGroup').click(function(){
+    $('#addGroup').click(function(){
         $('#diBox').dialog({
         	autoOpen : false,
         	resizable : false,
