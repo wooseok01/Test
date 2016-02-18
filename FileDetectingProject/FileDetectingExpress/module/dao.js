@@ -24,6 +24,10 @@ function joinUser(post, cb){
 	});
 	
 	userList.findOne({id : post.id}, function(err, data){
+		userFileList.save({
+		    id : post.id,
+		    path : root+dir+'/'+data._id
+		});
 	    cb(null,data);
 	});
     
@@ -161,6 +165,13 @@ function insertGroupListCollection(groupName, user, cb){
                 else cb(true);
             });
         }
+    });
+}
+
+function getUserId(objId, cb){
+    userList.findOne({_id : objId}, function(err, data){
+        if(err) cb(err,null);
+        else cb(null,data.id);
     });
 }
 
