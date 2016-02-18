@@ -30,7 +30,7 @@ router.get('/join', function(req, res, next){
 router.post('/join', function(req, res, next){
     var post = req.body;
     
-    dao.joinUser(post, function(err){
+    dao.joinUser(post, function(err,data){
     	if(err) console.log(err.message);
     	else{
     	    console.log('user join success!');
