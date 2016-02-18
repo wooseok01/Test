@@ -19,6 +19,7 @@ function autoFileDetect(root, dir){
             console.log('name-length ----> '+ name.length);
             
             var parentDirPlag = substring.substring(substring.indexOf('/'), substring.length);
+            console.log('parentDirPlag ---> '+parentDirPlag);
             console.log('parentDirPlag ---> '+parentDirPlag.indexOf('/'));
             if(parentDirPlag.indexOf('/') === -1 && name.length > 0){
                 console.log(file + ' is added!');
