@@ -74,14 +74,28 @@ router.get('/main', function(req, res, next){
     });
 });
 
+
 router.get('/group', function(req, res, next){
     sessionCheck(req.session, res);
-    console.log('session -> '+ req.session.user);
-    var groupList = dao.getGroupList(req.session.user);
+    res.render('group');
+});
+
+
+router.get('/addGroup', function(req, res, next){
+    if(!req.session.user) return false;
     
-    res.render('group', {
-        groupList : groupList
+    dao.addGroup(req.param('groupName'), req.session.user, function(bool){
+        if(bool) res.redirect('/main');
+        else res.render('/main', {
+            addGroupErr : true
+        });
     });
+});
+
+
+router.get('/getGroupList', function(req, res, next){
+    
+	
 });
 
 router.get('/getRootData', function(req, res, next){
@@ -110,18 +124,6 @@ router.post('/getDirData', function(req, res, next){
             //res.setHeader('Content-type', 'application/json');
             res.send(fileList);
         }
-    });
-});
-
-router.get('/addGroup', function(req, res, next){
-    if(!req.session.user) return false;
-    
-    console.log(req);
-    dao.addGroup(req.param('groupName'), req.session.user, function(bool){
-        if(bool) res.redirect('/main');
-        else res.render('/main', {
-            addGroupErr : true
-        });
     });
 });
 

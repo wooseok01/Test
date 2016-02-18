@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	
+	var getGroupInterface = groupDirInterface();
+	getGroupInterface.getGroupList();
+	
     $('#makeGroup').click(function(){
         $('#diBox').dialog({
         	autoOpen : false,
