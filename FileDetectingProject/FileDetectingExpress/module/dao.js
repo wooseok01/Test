@@ -182,5 +182,6 @@ module.exports = {
     getRootFile : getRootFile,
     getDirData : getDirData,
     getGroupList : getGroupList,
-    addGroup : addGroup
+    addGroup : addGroup,
+    getUserId : getUserId
 };
