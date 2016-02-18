@@ -37,6 +37,34 @@ $(document).ready(function(){
             }
         }
     });
+    
+    $('#makeGroup').click(function(){
+        $('#diBox').dialog({
+            autoOpen : false,
+            width : 500,
+            height : 800,
+            modal : true,
+            title : '그룹 생성',
+            resizable : false,
+            closeOnEscape : true,
+            closeText : '닫기',
+            
+            create : function(){
+                
+            },
+            open : function(){
+                
+            },
+            close : function(){
+                
+            },
+            cancle : function(){
+                
+            }
+        });
+        $('#diBox').dialog('open');
+    });
+    
 });
 
 function deleteIndent(fileName){

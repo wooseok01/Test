@@ -9,6 +9,7 @@ body
     h3 welcome #{user.name}님! 
     a(href="/myPage") #{user.id}
     a(href="/logout") 로그아웃
+    span#makeGroup + 그룹생성
   div.wrap
     div
       table
@@ -20,7 +21,11 @@ body
             th 수정 날짜
             th 남은 날짜
         tbody#tbody
+
+  div#diBox
+    input(type="text", placeholder="그룹명 입력")
           
   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+  script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js")
   script(type="text/javascript", src="js/mainScript.js")
   script(type="text/javascript", src="js/userDirInterface.js")
