@@ -124,7 +124,7 @@ function addGroup(groupName, user){
             groupList = [];
             groupList.push(groupName);
         }
-        userList.updateOne({id : user.id}, {$set : {groupList : groupList}});
+        userList.update({id : user.id}, {$set : {groupList : groupList}});
     });
 }
 
