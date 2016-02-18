@@ -110,6 +110,7 @@ function getDirData(user, path, cb){
 function getGroupList(user){
     userList.findOne({id : user.id}, function(err, data){
         var groupList = data.groupList;
+        console.log('groupList -> '+groupList);
         if(groupList == null) return null;
         else{
             return groupList;
