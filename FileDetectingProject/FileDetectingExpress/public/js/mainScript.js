@@ -40,6 +40,9 @@ $(document).ready(function(){
     
     $('#makeGroup').click(function(){
         $('#diBox').dialog({
+        	autoOpen : false,
+        	resizable : false,
+        	title : '그룹 생성',
             open : function(){
                 $(this).find('[type=submit]').hide();
             },
@@ -47,8 +50,24 @@ $(document).ready(function(){
             buttons : [
                 {
                     text : 'Create',
-                    click : $.noop,
-                    type : 'submit'
+                    click : function(){
+                        var groupName = $('#groupName').val();
+                        $.ajax({
+                            url : '/addGroup',
+                            data : {
+                                groupName : groupName
+                            },
+                            type : 'post',
+                            success : function(){
+                                alert('그룹 생성 완료!');
+                                $(this).dialog('close');
+                            },
+                            error : function(){
+                                alert('그룹 생성시 오류 발생!');
+                                $(this).dialog('close');
+                            }
+                        })
+                    },
                 },
                 {
                     text : 'Cancel',

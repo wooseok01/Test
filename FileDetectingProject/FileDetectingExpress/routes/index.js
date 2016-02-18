@@ -113,6 +113,11 @@ router.post('/getDirData', function(req, res, next){
     });
 });
 
+router.post('/addGroup', function(req, res, next){
+    var post = req.body;
+    console.log('groupName -> ' + post.groupName);
+});
+
 
 router.get(dir+'/*', function(req,res,next){
     sessionCheck(req.session, res);
