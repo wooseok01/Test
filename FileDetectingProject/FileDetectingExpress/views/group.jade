@@ -14,8 +14,12 @@ body
         div.group
           img(alt="dirImg", src="../public/images.jpeg")
           a(href="/selectGroup?#{groupList[key]}") #{groupList[key]}
-          
+
+  form(action="/addGroup", method="post")#diBox
+    input(type="text", placeholder="그룹명을 입력하세요.", id="groupName")
+    br
+    input(type="submit", value="Create")
           
   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
-  script(type="text/javascript", src="js/mainScript.js")
+  script(type="text/javascript", src="js/groupScript.js")
   script(type="text/javascript", src="js/userDirInterface.js")

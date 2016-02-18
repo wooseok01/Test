@@ -125,7 +125,6 @@ router.get('/addGroup', function(req, res, next){
     });
 });
 
-
 router.get(dir+'/*', function(req,res,next){
     sessionCheck(req.session, res);
     var path = url.parse(req.url).pathname;
