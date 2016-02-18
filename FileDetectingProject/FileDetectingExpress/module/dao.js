@@ -64,6 +64,7 @@ function getRootFile(user,cb){
                     }
                 });
             });
+            return fileList;
         });
     });
 }
@@ -115,7 +116,7 @@ function getGroupList(user){
     });
 }
 
-function addGroup(groupName, user){
+function addGroup(groupName, user, cb){
 	var groupList;
     userList.findOne({id : user.id}, function(err, data){
         groupList = data.groupList;
@@ -124,7 +125,10 @@ function addGroup(groupName, user){
             groupList = [];
             groupList.push(groupName);
         }
-        userList.update({id : user.id}, {$set : {groupList : groupList}});
+        userList.update({id : user.id}, {$set : {groupList : groupList}}, function(err){
+            if(err) cb(false);
+            else cb(true);
+        });
     });
 }
 

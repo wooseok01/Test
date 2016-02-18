@@ -22,6 +22,8 @@ body
             th 수정 날짜
             th 남은 날짜
         tbody#tbody
+  - if(addGroupErr)
+    div#addGroupErr #{addGroupErr}
 
   form(action="/addGroup", method="post")#diBox
     input(type="text", placeholder="그룹명을 입력하세요.", id="groupName")

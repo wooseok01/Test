@@ -113,12 +113,16 @@ router.post('/getDirData', function(req, res, next){
     });
 });
 
-router.post('/addGroup', function(req, res, next){
+router.get('/addGroup', function(req, res, next){
     if(!req.session.user) return false;
 
     var post = req.body;
-    dao.addGroup(post.groupName, req.session.user);
-    return true;
+    dao.addGroup(post.groupName, req.session.user, function(bool){
+        if(bool) res.redirect('/main');
+        else res.render('/main', {
+            addGroupErr : true
+        });
+    });
 });
 
 

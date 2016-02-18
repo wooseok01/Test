@@ -52,22 +52,8 @@ $(document).ready(function(){
                     text : 'Create',
                     click : function(){
                         var groupName = $('#groupName').val();
-                        $.ajax({
-                            url : '/addGroup',
-                            data : {
-                                groupName : groupName
-                            },
-                            type : 'post',
-                            success : function(bool){
-                            	if(bool == true) alert('그룹 생성 완료!');
-                                $(this).dialog('close');
-                            },
-                            error : function(){
-                                alert('그룹 생성시 오류 발생!');
-                                $(this).dialog('close');
-                            }
-                        })
-                    },
+                        location.href = '/addGroup?groupName='+groupName;
+                    }
                 },
                 {
                     text : 'Cancel',
@@ -79,6 +65,8 @@ $(document).ready(function(){
         });
         $('#diBox').dialog('open');
     });
+    
+    if($('#addGroupErr')) alert('그룹 생성 에러!');
     
 });
 
