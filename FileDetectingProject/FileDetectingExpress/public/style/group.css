@@ -25,6 +25,10 @@ body{
     height : 100%;
 }
 
+#groupList > div{
+    float : left;
+}
+
 .group{
     width : 25%;
     height : 25%;
