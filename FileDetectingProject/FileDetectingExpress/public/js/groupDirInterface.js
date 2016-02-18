@@ -8,10 +8,10 @@ function groupDirInterface(){
                 data.forEach(function(element, index) {
                     var div = $('<div class="group"></div>');
                     var img = $('<img></img>');
-                    var aTag = $('<a></a>');
+                    var aTag = $('<a></a>').html(element.groupName);
                     
-                    img.attr('src','../public/images.jpeg');
-                    aTag.attr('href','/selectGroup?groupName='+element);
+                    img.attr('src','../public/img/images.jpeg');
+                    aTag.attr('href','/selectGroup?groupName='+element.groupName);
                     
                     div.append(img);
                     div.append('<br>');

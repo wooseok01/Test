@@ -35,5 +35,9 @@ body{
 }
 
 .group > img{
-    width : 100%;
+    width : 25%;
+    margin-left : 20px;
+    margin-right : 20px;
+    margin-top : 30px;
+    margin-bottom: 30px; 
 }
