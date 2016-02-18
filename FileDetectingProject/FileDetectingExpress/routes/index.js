@@ -84,7 +84,7 @@ router.get('/addGroup', function(req, res, next){
     
     dao.addGroup(req.param('groupName'), req.session.user, function(bool){
         if(bool) res.redirect('/main');
-        else res.render('/main', {
+        else res.render('/group', {
             addGroupErr : true
         });
     });

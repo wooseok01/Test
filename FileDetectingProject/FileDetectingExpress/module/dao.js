@@ -131,9 +131,30 @@ function addGroup(groupName, user, cb){
         userList.update({id : user.id}, {$set : {groupList : groupList}}, function(err){
             if(err) cb(false);
         });
+        groupList.findOne({groupName : groupName}, function(err, data){
+            if(err) cb(false);
+            else if (data == null){
+                insertGroupListCollection(groupName, user, cb);
+            }
+        });
     });
-    
-    
+}
+
+function insertGroupListCollection(groupName, user, cb){
+    groupList.findOne({groupName : groupName}, function(err, data){
+        if(data != null) cb(false);
+        else if(data == null){
+        	var members = [];
+        	members.push({id : user.id});
+            groupList.save({
+                groupName : groupName,
+                members : members
+            }, function(err){
+                if(err) cb(false);
+                else cb(true);
+            });
+        }
+    });
 }
 
 
