@@ -54,6 +54,7 @@ $(document).ready(function(){
                     text : 'upload',
                     click : function(){
                         $(this).dialog('close');
+                        console.log($('#uploadFileName').val());
                     }
                 },
                 {

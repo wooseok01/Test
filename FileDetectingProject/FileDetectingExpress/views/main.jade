@@ -27,7 +27,7 @@ body
   form(action="/upload", method="post", enctype="multipart/form-data")#uploadForm
     lable 폴더는 압축한 후에 업로드 하면 서버에서는 압축이 풀린 상태로 들어갑니다.
     br
-    input(type="file", name="uploadFile")
+    input(type="file", name="uploadFile")#uploadFileName
     br
     input(type="submit", name="upload")
 
