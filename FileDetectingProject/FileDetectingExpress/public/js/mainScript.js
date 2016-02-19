@@ -38,6 +38,32 @@ $(document).ready(function(){
         }
     });
     
+    $('#uploadBtn').click(function(){
+        $('#uploadForm').dialog({
+            autoOpen : false,
+            resizable : false,
+            title : "업로드 다이얼로그",
+            open : function(){
+                $(this).find('[type=submit]').hide();
+            },
+            
+            buttons : [
+                {
+                    text : 'upload',
+                    click : function(){
+                        $(this).dialog('close');
+                    }
+                },
+                {
+                    text : 'Cancel',
+                    click : function(){
+                        $(this).dialog('close');
+                    }
+                }
+            ]
+        });
+        $('#uploadForm').dialog('open');
+    });
     
     
 });
