@@ -41,6 +41,8 @@ $(document).ready(function(){
     $('#uploadBtn').click(function(){
         $('#uploadForm').dialog({
             autoOpen : false,
+            width : 700,
+            height : 1000,
             resizable : false,
             title : "업로드 다이얼로그",
             open : function(){
