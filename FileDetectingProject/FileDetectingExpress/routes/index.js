@@ -5,7 +5,7 @@ var express = require('express'),
     fs = require('fs'),
     dao = require('../module/dao'),
     multer = require('multer'),
-    upload = multer();
+    upload = multer({dest : 'uploads/'});
 
 var root = '/home/songwooseok/Documents';
 var dir = '/root';
@@ -134,9 +134,9 @@ router.post('/getDirData', function(req, res, next){
     });
 });
 
-router.post('/upload', upload.array(), function(req, res, next){
+router.post('/upload', upload.single('uploadFile'), function(req, res, next){
     var post = req.body;
-    console.log('req.body ->>>'+req.body);
+    console.log('req.body ->>>'+req.body.uploadFile);
 });
 
 router.get(dir+'/*', function(req,res,next){
