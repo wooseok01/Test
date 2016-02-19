@@ -101,8 +101,6 @@ router.get('/getGroupList', function(req, res, next){
         res.setHeader('Content-type', 'application/json');
         res.send(groupList);
     });
-    
-	
 });
 
 router.get('/getRootData', function(req, res, next){
@@ -137,7 +135,7 @@ router.post('/getDirData', function(req, res, next){
 router.post('/upload', upload.single('uploadFile'), function(req, res, next){
     var post = req.body;
     console.log('req.body ->>>'+req.body.uploadFile);
-    console.log('file ---->>'+urlencode.decode(req.file.filename));
+    console.log('file ---->>'+urlencode.decode(req.file.encoding));
 });
 
 router.get(dir+'/*', function(req,res,next){

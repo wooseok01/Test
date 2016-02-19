@@ -8,7 +8,7 @@ var fs = require('fs'),
 
 function autoFileDetect(root, dir){
     var watcher = hound.watch(root + dir);
-    var serverUrl = 'localhost:3000';
+    var serverUrl = '10.211.55.6:3000';
 
     watcher.on('create', function(file, state){
         if(!file.match('.DS_Store')){
