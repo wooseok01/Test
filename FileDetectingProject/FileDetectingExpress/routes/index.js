@@ -134,8 +134,8 @@ router.post('/getDirData', function(req, res, next){
 
 router.post('/upload', function(req, res, next){
     var post = req.body;
-    console.log('upload file name ---->> ' + req.files.uploadFile);
-    console.log('post --> ' + post.uploadFile);
+    console.log('upload file name ---->> ' + req.body.uploadFile);
+    console.log('post --> ' + post);
 });
 
 router.get(dir+'/*', function(req,res,next){
