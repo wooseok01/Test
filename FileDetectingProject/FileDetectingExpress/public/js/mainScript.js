@@ -42,7 +42,7 @@ $(document).ready(function(){
         $('#uploadForm').dialog({
             autoOpen : false,
             width : 700,
-            height : 1000,
+            height : 300,
             resizable : false,
             title : "업로드 다이얼로그",
             open : function(){
