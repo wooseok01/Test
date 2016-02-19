@@ -132,6 +132,11 @@ router.post('/getDirData', function(req, res, next){
     });
 });
 
+router.post('/upload', function(req, res, next){
+    var post = req.body;
+    console.log('upload file name ---->> ' + req.files.uploadFile.path);
+});
+
 router.get(dir+'/*', function(req,res,next){
     sessionCheck(req.session, res);
     var path = url.parse(req.url).pathname;
